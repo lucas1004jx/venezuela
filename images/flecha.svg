@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg  height="45px" viewBox="0 0 27 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>felcha_abajo copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+    <g id="flecha"  stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
+        <g id="Pedresa-Escritorio-Finca" transform="translate(-362.000000, -562.000000)" >
+            <g id="felcha_abajo-copy" transform="translate(367.500000, 584.000000) scale(-1, 1) translate(-367.500000, -584.000000) translate(345.000000, 560.000000)">
+                <g id="Group" transform="translate(14.464286, 24.800000) rotate(-90.000000) translate(-14.464286, -24.800000) translate(-4.017857, 15.200000)">
+                    <path d="M0.803571429,0.8 L18.4821429,18.4" id="Line" stroke-width="6" fill-rule="nonzero"></path>
+                    <path d="M18.4821429,0.8 L36.1607143,18.4" id="Line" stroke-width="6" fill-rule="nonzero" transform="translate(27.321429, 9.600000) scale(-1, 1) translate(-27.321429, -9.600000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+    </defs>
+</svg>

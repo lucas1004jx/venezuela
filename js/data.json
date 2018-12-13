@@ -1,0 +1,165 @@
+{
+  "madrid":[
+    {"propietario":"Nervis Villalobos",
+    "tipo":"Casa aislada",
+    "localizacion":"La Moraleja. Alcobendas(Madrid)",
+    "superficie":"404 metros cuadrados construidos.<br/>2.970 metros de parcela",
+    "valor":"3.000.000 euros",
+    "year":"2014",
+    "img":""
+    },
+    {"propietario":"Luis Carlos de León",
+      "tipo":"Casa aislada",
+      "localizacion":"La Moraleja. Alcobendas(Madrid)",
+      "superficie":"1.007 metros construidos sobre parcela de 2.600 metros",
+      "valor":"5.000.000 a 6.000.000 (1)",
+      "year":"2014",
+    "img":""
+    },
+    {"propietario":"Julián José Osca Pacheco",
+      "tipo":"Piso en urbanización cerrada",
+      "localizacion":"Las Tablas. Distrito Fuencarral-El Pardo.",
+      "superficie":"183 metros cuadrados con garaje",
+      "valor":"Más de 720.000 euros (1)",
+      "year":"2016",
+    "img":""
+    },
+    {"propietario":"Sansobino 1997 SL (Andreína Gámez, esposa de De León)",
+      "tipo":"Dúplex con tres plazas de garaje",
+      "localizacion":"Calle Tahona. Distrito Chamartín. Madrid.",
+      "superficie":"222 metros cuadrados construidos más 139 metros de jardín",
+      "valor":"2.800.000 euros (3)",
+      "year":"2011",
+    "img":""
+    },
+    {"propietario":"CLAB-Consultoría Inmobiliaria SL (Carlos Aguilera Borjas)",
+      "tipo":"Apartamento en el complejo Eurobuilding II",
+      "localizacion":"Calle Orense. Distrito Chamartín. Madrid",
+      "superficie":"102 metros cuadrados más 62 metros terraza",
+      "valor":"1.015.000 euros (3)",
+      "year":"2010",
+    "img":""
+    },
+    {"propietario":"Kingsway Europe SL (Nervis Villalobos)",
+      "tipo":"Dos pisos",
+      "localizacion":"Calle José Abascal. Distrito Chamberí. Madrid",
+      "superficie":"300 metros cuadrados",
+      "valor":"1.600.000 (1)",
+      "year":"2017",
+      "img":""
+    },
+    {"propietario":"Kingsway Europe SL (Nervis Villalobos)",
+      "tipo":"Piso",
+      "localizacion":"Calle Barceló. Distrito Centro. Madrid.",
+      "superficie":"173 metros cuadrados",
+      "valor":"1.021.000 euros (2)",
+      "year":"2007",
+    "img":""
+    },
+    {"propietario":"Ricardo Lugo",
+      "ti":"Piso en urbanización cerrada y dos plazas de garaje",
+      "localizacion":"Parque del Planetario. Distrito Arganzuela. Madrid.",
+      "superficie":"96 metros cuadrados",
+      "valor":"500.000 euros (1)",
+      "year":"2013",
+    "img":""
+    },
+    {"propietario":"Compañía de Inversiones Agrícolas Triste SL (Alejandro Betancourt)",
+      "ti":"Piso",
+      "localizacion":"Calle Juan de Mena. Distrito Retiro. Madrid",
+      "superficie":"197 metros cuadrados",
+      "valor":"2.000.000 euros (1)",
+      "year":"n/d",
+    "img":""
+    },
+    {"propietario":"José Roberto Rincón Bravo",
+      "tipo":"Casa aislada",
+      "localizacion":"Pozuelo de Alarcón (Madrid)",
+      "superficie":"n/d",
+      "valor":"Más de 3.000.000 euros",
+      "year":"n/d",
+    "img":""
+    },
+    {"propietario":"Carlos Aguilera Borjas",
+      "tipo":"Casa aislada",
+      "localizacion":"Pozuelo de Alarcón (Madrid)",
+      "superficie":"260 metros cuadrados sobre parcela de 1.180 metros",
+      "valor":"970.000 euros (2)",
+      "year":"2004",
+    "img":""
+    },
+    {"propietario":"Carlos Aguilera Borjas",
+      "tipo":"Casa en finca",
+      "localizacion":"Chinchón (Madrid)",
+      "superficie":"476 metros construidos sobre parcela de 5,7 hectáreas",
+      "valor":"1.700.000 euros (1)",
+      "year":"2007",
+    "img":""
+    },
+    {"propietario":"Global Manghas SL (José Roberto Rincón Bravo)",
+      "tipo":"Mansión en finca",
+      "localizacion":"Villarejo de Salvanés (Madrid)",
+      "superficie":"1.523 metros construidos sobre finca de 312 hectáreas",
+      "valor":"Más de 26.000.000 euros (3)",
+      "year":"2014",
+    "img":""
+    },
+    {"propietario":"CLAB-Consultoría Inmobiliaria SL (Carlos Aguilera Borjas)",
+      "tipo":"Local comercial",
+      "localizacion":"Aranjuez (Madrid)",
+      "superficie":"263 metros cuadrados",
+      "valor":"83.000 euros (3)",
+      "year":"2005",
+    "img":""
+    }
+  ],
+  "toledo":[
+    {"propietario":"Compañía de Inversiones Agrícolas Triste SL (Alejandro Betancourt)",
+      "tipo":"Mansión en finca",
+      "localizacion":"Santa Cruz de Retamar (Toledo)",
+      "superficie":"1.397 hectáreas (superficie casa no disponible)",
+      "valor":"25.000.000 euros (4)",
+      "year":"2012",
+    "img":""
+    }
+  ],
+  "cuenca":[
+    {"propietario":"La Sabina Rusticae SL (Nervis Villalobos, Ricardo Lugo, Adrián Requena)",
+      "tipo":"Dos fincas con vivienda",
+      "localizacion":"Monteagudo de las Salinas y Solera de Gabaldón (Cuenca)",
+      "superficie":"768 hectáreas y 4 hectáreas (superficie de la casa no disponible)",
+      "valor":"Más de 2.600.000 euros (3)",
+      "year":"2011 y 2017",
+    "img":""
+    }
+  ],
+  "coruña":[
+    {"propietario":"CLAB-Consultoría Inmobiliaria SL (Carlos Aguilera Borjas)",
+      "tipo":"Piso con garaje y trastero",
+      "localizacion":"Cuatro Camiños. A Coruña",
+      "superficie":"103 metros cuadrados",
+      "valor":"400.000 euros (1)",
+      "year":"n/d",
+    "img":""
+    },
+    {"propietario":"CLAB-Consultoría Inmobiliaria SL (Carlos Aguilera Borjas)",
+      "tipo":"Piso con garaje y cuarto para bicicletas",
+      "localizacion":"Parque de Vioño. A Coruña",
+      "superficie":"101 metros cuadrados",
+      "valor":"420.000 euros (3)",
+      "year":"2011",
+    "img":""
+    }
+  ],
+  "barcelona":[
+    {"propietario":"Ernesto Reiter",
+      "tipo":"Casa",
+      "localizacion":"Valldoreix. Sant Cugat (Barcelona)",
+      "superficie":"579 metros construidos sobre parcela de 1.070 metros",
+      "valor":"1.500.000 – 2.000.000 (1)",
+      "year":"2015",
+    "img":""
+    }
+  ]
+
+}

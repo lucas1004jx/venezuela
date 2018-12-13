@@ -1,0 +1,865 @@
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-book-webfont.woff') format('woff'); font-weight: 100; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-bold-webfont.woff') format('woff'); font-weight: 700; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Benton Sans'; src: url('/fonts/v2.x/v2.0/benton/bentonsans-medium-webfont.woff') format('woff'); font-weight: 500; font-style: normal;font-display: swap; }
+@font-face { font-family: 'Majerit'; src: url('/fonts/v2.x/v2.0/majerit/majeritheadlinecondensedbold-webfont.woff') format('woff'); font-weight: 700; font-style: normal;font-display: swap; }
+
+
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+}
+
+
+
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* --------------preloader style-------------- */
+.preloader-container{
+  position: fixed;
+  z-index: 1000;
+  background:#000;
+  top:0;
+  left:0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.preloader{
+  fill:#fff;
+  width: 125px;
+
+}
+
+.preloader {
+animation: enter 1s linear 1;
+}
+
+.preloader-container .progress{
+  margin-top: 10px;
+  width: 125px;
+  height: 4px;
+  position: relative;
+}
+.preloader-container .progress .progress-bar{
+  width: 125px;
+  height: 4px;
+  background: #F6CE00;
+  animation: progress 1s linear 1 forwards;
+  position: absolute;
+  left: 0;
+  top:0;
+}
+
+
+@keyframes progress {
+0%{width: 0;}
+100%{width: 125px;}
+}
+/*------------  mark style --------*/
+.mark{
+    height: 30px;
+    object-fit: contain;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.mark-container{
+    position: absolute;
+    cursor: pointer;
+}
+
+.mark-container:before{
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #F6CE00;
+    top:50%;
+    left: 50%;
+    border-radius: 100%;
+    opacity: 0;
+}
+
+.mark-container:hover:before{
+    animation: expand 0.5s ease-out;
+}
+.mark-container .info{
+    margin: 0;
+    padding: 0;
+    display: none;
+}
+
+.mark-container .info .li{
+    text-decoration: none;
+}
+
+@keyframes expand {
+    0%{
+        opacity: 0;
+        transform: scale(1);
+    }
+
+    50%{
+        opacity: 0.5;
+        transform: scale(25);
+    }
+
+    100%{
+        opacity: 0;
+        transform: scale(50);
+    }
+}
+
+
+.logo-elpais{
+    position: absolute;
+    top:15px;
+    right: auto;
+    left: 15px;
+    z-index: 100;
+    width:80px;
+     fill:#fff;
+    transition: fill 0.5s linear;
+}
+
+.logo-elpais:hover{
+    fill:#F6CE00;
+}
+
+
+@media (max-width:999px) {
+    .mark{
+        height: 25px;
+    }
+}
+@media (max-width:768px) {
+   .mark{
+       height: 20px;
+   }
+}
+
+@media (max-width: 599px) {
+    .logo-elpais{
+        left: auto;
+        right: 10px;
+    }
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    overflow: hidden;
+}
+
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+
+.pixi-container{
+    background: url('images/flag.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.pixi-container .overlay{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(141deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);
+    z-index: 2;
+    opacity: 0;
+}
+/*-----------map container style-----------*/
+.map-container{
+
+}
+
+.map{
+    position: absolute;
+    width: 1000px;
+    height: 100%;
+    margin: 0;
+    top:0;
+    left: 40px;
+    z-index: 10;
+}
+
+.map img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+@media (max-width: 1200px) {
+    .map{
+        width: 800px;
+        left: 20px;
+    }
+}
+@media (max-width: 999px) {
+    .map{
+        width: 725px;
+        left: 0;
+    }
+}
+@media (max-width: 768px) {
+    .map{
+        width: 600px;
+        left: 0;
+    }
+}
+@media (max-width: 599px) {
+    .map{
+        z-index: 2;
+    }
+    .pixi-container,.map-container{
+position: fixed ;
+    }
+
+    .pixi-container{
+      background: url('images/flag-mobile.jpg') no-repeat center center;
+    }
+}
+
+/*----------text container style----------*/
+.text-container{
+    width: 30%;
+    color:#fff;
+    right: 0;
+    margin-right:50px;
+    position: absolute;
+    z-index: 11;
+    opacity: 0;
+}
+
+.text-container h1{
+    font-family: 'MajeritHeadlineCondensedBold',sans-serif;
+    font-size: 55px;
+    text-align: right;
+}
+.text-container h1 span{
+    display: inline-block;
+}
+.text-container h3{
+    font-family: 'BentonSans-Bold',serif;
+    font-size: 12px;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: normal;
+}
+.text-container h3 .mark{
+    position: static;
+    cursor:default;
+    opacity: 1;
+
+}
+.text-container p{
+  font-family: "BentonSans-Book",sans-serif;
+    font-size: 20px;
+    text-align: right;
+    font-weight: lighter;
+}
+.text-container .social-media{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.text-container .social-icon{
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+    cursor: pointer;
+    fill:#F6CE00;
+    margin-left: 10px;
+}
+@media (max-width: 999px) {
+    .text-container{
+        width: 35%;
+        margin-right: 20px;
+    }
+    .text-container h1{
+        font-size: 46px;
+    }
+    .text-container h3{
+        font-size: 10px;
+    }
+    .text-container p{
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+   .text-container{
+       width: 40%;
+       margin-right: 15px;
+   }
+    .text-container h1{
+   font-size: 40px;
+        margin-top: 50px;
+    }
+    .text-container h3{
+        font-size: 8px;
+    }
+    .text-container p{
+     font-size: 15px;
+    }
+}
+
+@media (max-width: 599px) {
+   .text-container{
+       position: relative;
+       width: 100%;
+       margin: 0;
+       z-index: 10;
+       padding: 15px;
+       padding-top: 30px;
+       height: auto;
+
+   }
+    .text-container .social-media{
+        position: absolute;
+        top:15px;
+        left: 15px;
+        display: inline-block;
+    }
+    .text-container .social-media .social-icon{
+        fill:#fff;
+        height: 16px;
+    }
+    .text-container h1{
+        font-size: 33px;
+        margin-top: 50px;
+    }
+    .text-container h1 span{
+        display: inline;
+    }
+    .text-container p{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+
+
+
+/*-----------------mini map container style-----------*/
+.mini-map-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    width: 250px;
+    z-index: 120;
+
+}
+
+.mini-map{
+    width: 48%;
+    margin: 0;
+    margin-bottom: 10px;
+    position: relative;
+    opacity: 0;
+}
+.mini-map img{
+width: 100%;
+    object-fit: contain;
+}
+
+.mini-map figcaption{
+    font-family: "BentonSans-Medium";
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 10px;
+}
+@media (max-width: 1200px) {
+    .mini-map-container{
+        width: 220px;
+    }
+}
+@media (max-width: 999px) {
+    .mini-map-container{
+        width: 200px;
+    }
+}
+@media (max-width: 768px) {
+    .mini-map-container{
+        width: 180px;
+    }
+}
+
+
+@media (max-width: 599px) {
+    .map-container .map{
+        width: 100%;
+        left: 0;
+    }
+    .map-container .map img{
+        object-fit: cover;
+        object-position: 100% 100%;
+    }
+}
+/*-----------mouse down style----------*/
+.mouse_down{
+    position: absolute;
+    height: 40px;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+    opacity: 0;
+}
+
+@media (max-width: 768px) {
+    .mouse_down{
+        height: 30px;
+    }
+}
+
+/*-----------mark style----------*/
+.toledo .mark-container{
+    top:0px;
+    left: 24%;
+}
+.cuenca .mark-container{
+    top:10%;
+    left: 57%;
+}
+
+.coruña .mark-container:nth-of-type(1){
+    top:12%;
+    left: 14%;
+}
+.coruña .mark-container:nth-of-type(2){
+    top:12%;
+    left: 27%;
+}
+.barcelona .mark-container{
+    top:30%;
+    left: 47%;
+}
+.madrid .mark-container:nth-of-type(1){
+    top:47%;
+    left: 58%;
+}
+.madrid .mark-container:nth-of-type(2){
+    top:48%;
+    left: 59%;
+}
+.madrid .mark-container:nth-of-type(3){
+    top:50%;
+    left: 57%;
+}
+.madrid .mark-container:nth-of-type(4){
+    top:53%;
+    left: 58%;
+}
+.madrid .mark-container:nth-of-type(5){
+    top:54%;
+    left: 56.5%;
+}
+.madrid .mark-container:nth-of-type(6){
+    top:55%;
+    left: 55.2%;
+}
+.madrid .mark-container:nth-of-type(7){
+    top:56%;
+    left: 54%;
+}
+.madrid .mark-container:nth-of-type(8){
+    top:58%;
+    left: 55.5%;
+}
+.madrid .mark-container:nth-of-type(9){
+    top:56%;
+    left: 57%;
+}
+.madrid .mark-container:nth-of-type(10){
+    top:55%;
+    left: 49%;
+}
+.madrid .mark-container:nth-of-type(11){
+    top:56%;
+    left: 50%;
+}
+.madrid .mark-container:nth-of-type(12){
+    top:78%;
+    left: 67%;
+}
+.madrid .mark-container:nth-of-type(13){
+    top:81%;
+    left: 80%;
+}
+.madrid .mark-container:nth-of-type(14){
+    top:89%;
+    left: 58%;
+}
+
+@media (max-width: 1200px) {
+
+    .madrid .mark-container:nth-of-type(1){
+        top:46.5%;
+        left: 59.5%;
+    }
+    .madrid .mark-container:nth-of-type(2){
+        top:47.5%;
+        left: 61%;
+    }
+    .madrid .mark-container:nth-of-type(3){
+        top:50%;
+        left: 57%;
+    }
+    .madrid .mark-container:nth-of-type(4){
+        top:51%;
+        left: 60%;
+    }
+    .madrid .mark-container:nth-of-type(5){
+        top:53%;
+        left: 58.5%;
+    }
+    .madrid .mark-container:nth-of-type(6){
+        top:55%;
+        left: 57.2%;
+    }
+    .madrid .mark-container:nth-of-type(7){
+        top:56.5%;
+        left: 55.5%;
+    }
+    .madrid .mark-container:nth-of-type(8){
+        top:58%;
+        left: 58%;
+    }
+    .madrid .mark-container:nth-of-type(9){
+        top:57%;
+        left: 60%;
+    }
+    .madrid .mark-container:nth-of-type(10){
+        top:55%;
+        left: 49%;
+    }
+    .madrid .mark-container:nth-of-type(11){
+        top:56%;
+        left: 50%;
+    }
+    .madrid .mark-container:nth-of-type(12){
+        top:78%;
+        left: 69%;
+    }
+    .madrid .mark-container:nth-of-type(13){
+        top:80%;
+        left: 85%;
+    }
+    .madrid .mark-container:nth-of-type(14){
+        top:89%;
+        left: 60%;
+    }
+
+}
+@media (max-width: 999px) {
+
+    .madrid .mark-container:nth-of-type(1){
+        top:46.5%;
+        left: 59.5%;
+    }
+    .madrid .mark-container:nth-of-type(2){
+        top:47.5%;
+        left: 61%;
+    }
+    .madrid .mark-container:nth-of-type(3){
+        top:50%;
+        left: 57%;
+    }
+    .madrid .mark-container:nth-of-type(4){
+        top:51%;
+        left: 60%;
+    }
+    .madrid .mark-container:nth-of-type(5){
+        top:53%;
+        left: 58.5%;
+    }
+    .madrid .mark-container:nth-of-type(6){
+        top:55%;
+        left: 57.2%;
+    }
+    .madrid .mark-container:nth-of-type(7){
+        top:56.5%;
+        left: 55.5%;
+    }
+    .madrid .mark-container:nth-of-type(8){
+        top:58%;
+        left: 58%;
+    }
+    .madrid .mark-container:nth-of-type(9){
+        top:57%;
+        left: 60%;
+    }
+    .madrid .mark-container:nth-of-type(10){
+        top:55%;
+        left: 49%;
+    }
+    .madrid .mark-container:nth-of-type(11){
+        top:56%;
+        left: 50%;
+    }
+    .madrid .mark-container:nth-of-type(12){
+        top:75%;
+        left: 69%;
+    }
+    .madrid .mark-container:nth-of-type(13){
+        top:77%;
+        left: 85%;
+    }
+    .madrid .mark-container:nth-of-type(14){
+        top:86%;
+        left: 60%;
+    }
+
+}
+
+/*-----------popup container-----------*/
+.popup-container{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(21,17,0,0.86);
+    display: none;
+    z-index: 990;
+}
+
+.popup-container .popup{
+    position: absolute;
+    width: 80%;
+    max-width: 980px;
+    background:#FFE979 url('images/profile.png') no-repeat right bottom;
+    background-size: auto 80%;
+    background-blend-mode: multiply;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+
+}
+
+.popup-container .img-info{
+    margin: 0;
+    width: 48%;
+    background: #fff;
+}
+.popup-container .text-info{
+    width: 48%;
+}
+.popup-container .text-info h3{
+    font-weight: normal;
+    font-family: "BentonSans-Book",sans-serif;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+.popup-container .text-info p{
+    font-family: "BentonSans-Bold";
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.popup-container .popup .flecha,.popup-container .popup .close{
+    position: absolute;
+    cursor: pointer;
+
+}
+.popup-container .popup .flecha img,.popup-container .popup .close img{
+    width: 100%;
+    object-fit: contain;
+}
+.popup-container .popup .flecha,.popup-container .popup .close{
+    width: 25px;
+}
+
+.popup-container .popup .flecha{
+    width: 25px;
+    stroke: #F6CE00;
+}
+.popup-container .popup .flecha-left{
+    top:50%;
+    transform: translateY(-50%);
+    left:-45px;
+
+}
+.popup-container .popup .flecha-right{
+    top:50%;
+    transform: translateY(-50%) rotate(180deg);
+    right:-45px;
+}
+
+.popup-container .popup .close{
+    right: 10px;
+    top:10px;
+}
+
+@media (max-width: 599px) {
+    .popup-container{
+        position: fixed;
+        z-index: 100;
+    }
+    .popup-container .popup{
+        flex-direction: column;
+        height: 80%;
+        padding: 0;
+        background-size: auto 34%;
+        width: 90%;
+    }
+    .popup-container .popup .img-info{
+        height: 40%;
+        width: 100%;
+    }
+    .popup-container .popup .text-info{
+        height: 60%;
+        width: 80%;
+        padding: 15px;
+    }
+    .popup-container .popup .text-info h3{
+        margin-bottom: 0;
+        font-size: 14px;
+    }
+    .popup-container .popup .text-info p{
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+
+    .popup-container .popup .flecha-left{
+        top:20%;
+        left: 5px;
+    }
+    .popup-container .popup .flecha-right{
+        top:20%;
+        right: 5px;
+    }
+    .popup-container .popup .flecha{
+        width: 20px;
+    }
+    .popup-container .popup .flecha img{
+        width: 100%;
+        object-fit: contain;
+    }
+}
+/*--------comunidades mobile style-------*/
+
+@media (max-width: 599px) {
+    .comunidades{
+        position: relative;
+        z-index: 10;
+        color: #fff;
+        padding: 15px;
+    }
+    .comunidades section{
+        opacity: 0;
+    }
+    .comunidades section + section{
+        margin-top: 15px;
+    }
+    .comunidades section header{
+        background: #F6CE00;
+        color: #000;
+        font-family: "BentonSans-Bold",sans-serif;
+        text-transform: uppercase;
+        font-size: 10px;
+        padding: 15px;
+       display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+    }
+    .comunidades section .content{
+        overflow: hidden;
+    }
+    .comunidades section header .dropdown{
+        stroke:#000;
+        width: 16px;
+        height: 16px;
+        cursor: pointer;
+        transition: transform 0.3s ease-in;
+        transform: rotate(-90deg);
+    }
+
+    .comunidades section header .dropdown.hide{
+        transform: rotate(90deg);
+    }
+    .otras-comunidades .content{
+        height: 0;
+    }
+    .comunidades section header h2{
+        margin: 0;
+        display: inline-block;
+    }
+    .comunidad h3{
+        color:#F6CE00;
+        font-family:"BentonSans-Bold",sans-serif ;
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 15px;
+        margin: 0;
+    }
+    .comunidad ul{
+        margin-top: 0;
+    }
+    .comunidad ul li{
+       font-size: 14px;
+        font-family: "BentonSans-Medium",sans-serif;
+        font-weight: normal;
+        margin-bottom: 5px;
+        cursor: pointer;
+    }
+}
+
+
+/*------tooltip style---------------*/
+.tooltip{
+    font-family: "BentonSans-Book",sans-serif;
+    font-size: 10px;
+    background: #000;
+    color:#fff;
+    padding: 5px;
+    position: absolute;
+    top:-20px;
+    display: inline-block;
+    z-index: 200;
+    white-space: pre;
+}
+
+@media (max-width: 599px){
+    body{
+
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+}
